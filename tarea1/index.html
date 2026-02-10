@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CV - Dario Rodriguez</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #764ba2;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #667eea;
+            text-decoration: none;
+            padding: 8px 16px;
+            font-weight: 500;
+            border-radius: 5px;
+        }
+
+        nav a:hover,
+        nav a:focus {
+            background-color: #667eea;
+            color: white;
+            outline: none;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 32px auto;
+            padding: 0 16px;
+        }
+
+        .hero {
+            background: white;
+            padding: 48px 32px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 40px;
+            margin-bottom: 8px;
+        }
+
+        .ubicacion {
+            color: #666;
+            margin-bottom: 16px;
+            font-size: 18px;
+        }
+
+        .descripcion {
+            color: #555;
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        section {
+            background: white;
+            padding: 24px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 24px;
+        }
+
+        h2 {
+            color: #667eea;
+            margin-bottom: 24px;
+            font-size: 28.8px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            color: #764ba2;
+            margin-top: 16px;
+            margin-bottom: 8px;
+        }
+
+        .trabajo, .educacion {
+            margin-bottom: 24px;
+            padding: 16px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+        }
+
+        .empresa, .institucion {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .fecha {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+
+        .gpa {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        ul {
+            margin-left: 24px;
+            margin-top: 8px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .lista-proyectos {
+            list-style: none;
+            margin-left: 0;
+            display: grid;
+            gap: 16px;
+        }
+
+        .lista-proyectos li {
+            background: #667eea;
+            color: white;
+            padding: 24px;
+            border-radius: 8px;
+        }
+
+        .lista-proyectos h3 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .tech-grid {
+            display: grid;
+            gap: 24px;
+        }
+
+        .tech-category {
+            background: #f8f9fa;
+            padding: 16px;
+            border-radius: 8px;
+        }
+
+        .tech-category h3 {
+            margin-top: 0;
+        }
+
+        footer {
+            background-color: rgba(255, 255, 255, 0.921);
+            color: #333;
+            text-align: center;
+            padding: 32px;
+            margin-top: 48px;
+        }
+
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        footer a:hover,
+        footer a:focus {
+            text-decoration: underline;
+        }
+
+        :focus {
+            outline: 2px solid #667eea;
+            outline-offset: 2px;
+        }
+    
+        nav ul {
+            flex-wrap: wrap;
+            flex-direction:row;
+            gap: 8px;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+
+        .hero {
+            padding: 32px 16px;
+        }
+
+        section {
+            padding: 24px;
+        }
+
+        .tech-grid {
+            grid-template-columns: 1fr;
+        }
+        
+    </style>
+</head>
+<body>
+    <header role="banner">
+        <nav role="navigation" aria-label="Navegación principal">
+            <ul>
+                <li><a href="#acerca" tabindex="0">Acerca de</a></li>
+                <li><a href="#proyectos" tabindex="0">Proyectos</a></li>
+                <li><a href="#tecnologias" tabindex="0">Tecnologías</a></li>
+                <li><a href="contacto.html" tabindex="0">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main role="main">
+        <div class="hero">
+            <h1 id="titulo-principal">Dario Lucciano Rodriguez Dueñez</h1>
+            <p class="descripcion">
+                Desarrollador de Software con experiencia en desarrollo front-end y back-end. 
+                Creativo y analítico, disfruto crear experiencias de usuario atractivas y desarrollar 
+                soluciones técnicas innovadoras.
+            </p>
+        </div>
+
+        <section id="acerca" aria-labelledby="titulo-acerca">
+            <article aria-labelledby="titulo-experiencia">
+                <h2 id="titulo-experiencia">Experiencia Profesional</h2>
+                <div class="trabajo">
+                    <h3>Desarrollador Backend Python (Freelance)</h3>
+                    <p class="empresa">Universe Consulting</p>
+                    <p class="fecha" aria-label="Periodo laboral">Julio 2025 – Agosto 2025 | Guadalajara, México</p>
+                    <ul>
+                        <li>Diseñé y desarrollé una herramienta de automatización completa que optimizó el flujo operacional del equipo</li>
+                        <li>Integré APIs de Gemini, YouTube y Google Sheets para automatizar búsqueda y clasificación de contenido</li>
+                        <li>Implementé interfaz interactiva con Streamlit y desplegué la aplicación en la nube</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article aria-labelledby="titulo-educacion">
+                <h2 id="titulo-educacion">Educación</h2>
+                <div class="educacion">
+                    <h3>Ingeniería en Desarrollo de Software</h3>
+                    <p class="institucion">Universidad Jesuita de Guadalajara (ITESO)</p>
+                    <p class="fecha" aria-label="Graduación esperada">Graduación esperada: Agosto 2027</p>
+                </div>
+            </article>
+        </section>
+
+        <section id="proyectos" aria-labelledby="titulo-proyectos">
+            <h2 id="titulo-proyectos">Proyectos Destacados</h2>
+            <ul class="lista-proyectos" role="list">
+                <li>
+                    <h3>AI YouTube Data Collector</h3>
+                    <p>Herramienta impulsada por IA para extraer y analizar datos de YouTube</p>
+                </li>
+                <li>
+                    <h3>Prototipo de Juego en Unity</h3>
+                    <p>Juego táctico en tiempo real con sistema de movimiento basado en cuadrícula, programado en C#</p>
+                </li>
+                <li>
+                    <h3>Librería de Juegos en Java</h3>
+                    <p>Librería de videojuegos 2D desarrollada en Java usando Swing</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="tecnologias" aria-labelledby="titulo-tecnologias">
+            <h2 id="titulo-tecnologias">Tecnologías y Experiencia</h2>
+            <div class="tech-grid">
+                <article class="tech-category" aria-labelledby="lenguajes-titulo">
+                    <h3 id="lenguajes-titulo">Lenguajes</h3>
+                    <ul role="list">
+                        <li>Python</li>
+                        <li>C#</li>
+                        <li>C++</li>
+                        <li>C</li>
+                        <li>Java</li>
+                        <li>JavaScript</li>
+                        <li>SQL</li>
+                    </ul>
+                </article>
+
+                <article class="tech-category" aria-labelledby="web-titulo">
+                    <h3 id="web-titulo">Tecnologías Web</h3>
+                    <ul role="list">
+                        <li>HTML5</li>
+                        <li>CSS</li>
+                    </ul>
+                </article>
+
+                <article class="tech-category" aria-labelledby="herramientas-titulo">
+                    <h3 id="herramientas-titulo">Herramientas</h3>
+                    <ul role="list">
+                        <li>Git</li>
+                        <li>Unity</li>
+                        <li>Docker</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p>Dario Lucciano Rodriguez Dueñez</p>
+        <p>
+            <a href="https://github.com/Dario467" target="_blank"  aria-label="Perfil de GitHub" tabindex="0">GitHub</a> | 
+            <a href="mailto:dario.rodriguez@iteso.mx" target="_blank" aria-label="Correo electrónico" tabindex="0">Email</a> | 
+            <a href="tel:3326522443" aria-label="Número de teléfono" tabindex="0">Teléfono</a>
+        </p>
+    </footer>
+</body>
+</html>
