@@ -1,0 +1,74 @@
+
+// ── Reset y base ─────────────────────────────────────────────
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family;
+    line-height: $line-height;
+    color: $color-text;
+    background: $color-bg-page;
+    min-height: 100vh;
+}
+
+// ── Placeholders reutilizables ───────────────────────────────
+%heading-primary {
+    color: $color-primary;
+}
+
+%heading-secondary {
+    color: $color-secondary;
+}
+
+%bg-card-soft {
+    background: $color-bg-card;
+    border-radius: $border-radius-sm;
+}
+
+%link-base {
+    color: $color-primary;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+// ── Tipografía ───────────────────────────────────────────────
+h1 {
+    @extend %heading-primary;
+    font-size: $font-size-h1;
+    margin-bottom: $spacing-xs;
+
+    @include respond-to(md) {
+        font-size: $font-size-h1-sm;
+    }
+}
+
+h2 {
+    @extend %heading-primary;
+    margin-bottom: $spacing-md;
+    font-size: $font-size-h2;
+    border-bottom: 3px solid $color-primary;
+    padding-bottom: $spacing-xs;
+}
+
+h3 {
+    @extend %heading-secondary;
+    margin-top: $spacing-sm;
+    margin-bottom: $spacing-xs;
+}
+
+ul {
+    margin-left: $spacing-md;
+    margin-top: $spacing-xs;
+
+    li {
+        margin-bottom: $spacing-xs;
+    }
+}
+
+// ── Focus global ─────────────────────────────────────────────
+:focus {
+    @include focus-ring;
+}
