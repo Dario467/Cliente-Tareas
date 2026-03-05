@@ -1,0 +1,59 @@
+
+// ── Header ───────────────────────────────────────────────────
+header {
+    background-color: rgba($color-white, 0.95);
+    padding: $spacing-sm 0;
+    position: sticky;
+    top: 0;
+    box-shadow: $shadow-nav;
+    z-index: 100;
+}
+
+// ── Nav ──────────────────────────────────────────────────────
+nav {
+    ul {
+        list-style: none;
+        display: flex;
+        gap: $spacing-lg;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+
+        @include respond-to(md) {
+            gap: $spacing-xs;
+        }
+    }
+
+    a {
+        @extend %link-base;
+        padding: $spacing-xs $spacing-sm;
+        border-radius: $border-radius-sm;
+        @include nav-link-hover;
+    }
+}
+
+// ── Main ─────────────────────────────────────────────────────
+main {
+    max-width: 1000px;
+    margin: $spacing-lg auto;
+    padding: 0 $spacing-sm;
+}
+
+// ── Footer ───────────────────────────────────────────────────
+footer {
+    background-color: rgba($color-white, 0.921);
+    color: $color-text;
+    text-align: center;
+    padding: $spacing-lg;
+    margin-top: $spacing-xl;
+
+    a {
+        @extend %link-base;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+}

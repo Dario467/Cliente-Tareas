@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CV Contacto</title>
+    <link rel="stylesheet" href="./css/contacto.css">
+</head>
+<body>
+    <header role="banner">
+        <nav role="navigation" aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html#acerca" tabindex="0">Acerca de</a></li>
+                <li><a href="index.html#proyectos" tabindex="0">Proyectos</a></li>
+                <li><a href="index.html#tecnologias" tabindex="0">Tecnologías</a></li>
+                <li><a href="contacto.html" tabindex="0" aria-current="page">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main role="main">
+        <section aria-labelledby="titulo-contacto">
+            <h1 id="titulo-contacto">Contacto</h1>
+            <p>Si quieres ponerte en contacto conmigo, completa el siguiente formulario:</p>
+
+            <form action="https://formsubmit.co/dario.rodriguez@iteso.mx" method="POST" aria-label="Formulario de contacto">
+                <input type="hidden" name="_subject" value="Nuevo mensaje desde CV en línea">
+                <input type="hidden" name="_captcha" value="false">
+
+                <div class="form-group">
+                    <label for="nombre">Nombre completo <span aria-label="requerido">*</span></label>
+                    <input class="inputs"
+                        type="text" 
+                        id="nombre" 
+                        name="nombre" 
+                        required 
+                        aria-required="true"
+                        tabindex="0"
+                        placeholder="Tu nombre">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico <span aria-label="requerido">*</span></label>
+                    <input 
+                        class="inputs"
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        required 
+                        aria-required="true"
+                        placeholder="tu@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="asunto">Asunto</label>
+                    <input 
+                        class="inputs"
+                        type="text" 
+                        id="asunto" 
+                        name="asunto" 
+                        required
+                        aria-required="true"
+                        placeholder="Asunto del mensaje">
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje <span aria-label="requerido">*</span></label>
+                    <textarea 
+                        class="inputs"
+                        id="mensaje" 
+                        name="mensaje" 
+                        required 
+                        aria-required="true"
+                        placeholder="Escribe tu mensaje aquí"></textarea>
+                </div>
+
+                <button type="submit" tabindex="0" aria-label="Enviar formulario">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p>Dario Lucciano Rodriguez Dueñez</p>
+        <p>
+            <a href="https://github.com/Dario467" target="_blank" rel="noopener noreferrer" aria-label="Perfil de GitHub" tabindex="0">GitHub</a> | 
+            <a href="mailto:dario.rodriguez@iteso.mx" aria-label="Correo electrónico" tabindex="0">Email</a> |
+            <a href="tel:3326522443" aria-label="Número de teléfono" tabindex="0">Teléfono</a>
+        </p>
+    </footer>
+</body>
+</html>

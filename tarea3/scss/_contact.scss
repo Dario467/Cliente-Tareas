@@ -1,0 +1,84 @@
+
+// ── Sobrescritura de main para contacto (max-width 700px) ────
+main {
+    max-width: 700px;
+}
+
+// ── Sección de contacto ──────────────────────────────────────
+section {
+    padding: 40px;
+
+    @include respond-to(md) {
+        padding: $spacing-md;
+    }
+
+    & > p {
+        margin-bottom: $spacing-lg;
+        color: $color-text-light;
+    }
+}
+
+// ── Formulario ───────────────────────────────────────────────
+.form-group {
+    margin-bottom: $spacing-md;
+}
+
+label {
+    display: block;
+    margin-bottom: $spacing-xs;
+    font-weight: 500;
+    color: $color-text;
+
+    span {
+        color: $color-danger;
+    }
+}
+
+// Usamos @each para aplicar estilos base a los tipos de input del formulario
+$input-types: text, email;
+
+@each $type in $input-types {
+    input[type="#{$type}"] {
+        width: 98%;
+        padding: 12px;
+        border: 2px solid $color-border;
+        border-radius: $border-radius-sm;
+        font-size: $font-size-base;
+        font-family: $font-family;
+    }
+}
+
+.inputs {
+    width: 98%;
+    padding: 12px;
+    border: 2px solid $color-border;
+    border-radius: $border-radius-sm;
+    font-size: $font-size-base;
+    font-family: $font-family;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+// ── Botón de envío ───────────────────────────────────────────
+button {
+    background: linear-gradient(135deg, $color-primary 0%, $color-secondary 100%);
+    color: $color-white;
+    padding: 14.4px 40px;
+    border: none;
+    border-radius: $border-radius-sm;
+    font-size: $font-size-base;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+
+    &:focus {
+        @include focus-ring;
+    }
+}

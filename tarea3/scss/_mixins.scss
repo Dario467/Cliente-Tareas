@@ -1,0 +1,38 @@
+
+// ── Mixin: respond-to (breakpoints) ─────────────────────────
+@mixin respond-to($bp) {
+    @if $bp == sm {
+        @media (max-width: #{$bp-sm}) { @content; }
+    } @else if $bp == md {
+        @media (max-width: #{$bp-md}) { @content; }
+    }
+}
+
+// ── Mixin: card (fondo blanco, border-radius, sombra) ────────
+@mixin card($padding: $spacing-md, $shadow: $shadow-sm) {
+    background: $color-white;
+    padding: $padding;
+    border-radius: $border-radius-lg;
+    box-shadow: $shadow;
+}
+
+// ── Mixin: link-hover (nav y footer links) ───────────────────
+@mixin nav-link-hover {
+    &:hover,
+    &:focus {
+        background-color: $color-primary;
+        color: $color-white;
+        outline: none;
+    }
+}
+
+// ── Mixin: focus-ring ────────────────────────────────────────
+@mixin focus-ring($color: $color-primary) {
+    outline: 2px solid $color;
+    outline-offset: 2px;
+}
+
+// ── Mixin: border-left-accent ────────────────────────────────
+@mixin border-left-accent($color: $color-primary, $width: 4px) {
+    border-left: $width solid $color;
+}

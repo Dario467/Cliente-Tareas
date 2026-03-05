@@ -1,0 +1,112 @@
+
+// ── Hero ─────────────────────────────────────────────────────
+.hero {
+    @include card($spacing-xl $spacing-lg, $shadow-md);
+    margin-bottom: $spacing-lg;
+    text-align: center;
+
+    @include respond-to(md) {
+        padding: $spacing-lg $spacing-sm;
+    }
+
+    .ubicacion {
+        color: $color-text-light;
+        margin-bottom: $spacing-sm;
+        font-size: $font-size-desc;
+    }
+
+    .descripcion {
+        color: $color-text-mid;
+        font-size: $font-size-desc;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+}
+
+// ── Secciones generales ──────────────────────────────────────
+section {
+    @include card($spacing-md, $shadow-sm);
+    margin-bottom: $spacing-md;
+
+    @include respond-to(md) {
+        padding: $spacing-md;
+    }
+}
+
+// ── Trabajo / Educación ──────────────────────────────────────
+// Usamos @each para generar los estilos de .trabajo y .educacion
+$entry-types: trabajo, educacion;
+
+@each $type in $entry-types {
+    .#{$type} {
+        @extend %bg-card-soft;
+        margin-bottom: $spacing-md;
+        padding: $spacing-sm;
+        @include border-left-accent;
+    }
+}
+
+.empresa,
+.institucion {
+    font-weight: bold;
+    color: $color-text;
+}
+
+.fecha {
+    color: $color-text-light;
+    font-style: italic;
+    margin-bottom: $spacing-xs;
+}
+
+.gpa {
+    color: $color-success;
+    font-weight: bold;
+}
+
+// ── Lista de proyectos ───────────────────────────────────────
+.lista-proyectos {
+    list-style: none;
+    margin-left: 0;
+    display: grid;
+    gap: $spacing-sm;
+
+    // Generamos estilos de fondo para cada ítem con @for
+    // (Los 3 proyectos usan el mismo color primary — el loop
+    //  garantiza que cada li:nth-child quede cubierto)
+    @for $i from 1 through 3 {
+        li:nth-child(#{$i}) {
+            background: $color-primary;
+        }
+    }
+
+    li {
+        background: $color-primary;
+        color: $color-white;
+        padding: $spacing-md;
+        border-radius: $border-radius-md;
+
+        h3 {
+            color: $color-white;
+            margin-top: 0;
+        }
+    }
+}
+
+// ── Tech grid ────────────────────────────────────────────────
+.tech-grid {
+    display: grid;
+    gap: $spacing-md;
+
+    @include respond-to(md) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.tech-category {
+    @extend %bg-card-soft;
+    padding: $spacing-sm;
+
+    h3 {
+        margin-top: 0;
+    }
+}
